@@ -15,6 +15,8 @@ export class TokenInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     // Burada token'ı requeste ekleme veya requesti değiştirme işlemlerini yapabilirsiniz
+
+    console.log('interceptor çalıştı')
     const token = this.authService.getToken();
     if (token) {
       request = request.clone({

@@ -18,8 +18,8 @@ export class WeatherComponent implements OnInit {
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    
-    // this.weatherService.getWeatherForecasts().subscribe(      
+    console.log('WeatherComponent yüklendi.');
+    // this.weatherService.getWeatherForecasts().subscribe(
     //   (data) => {
     //     console.log(data);
     //     this.forecasts = data;

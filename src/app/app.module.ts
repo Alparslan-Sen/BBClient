@@ -10,6 +10,7 @@ import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
 import { TokenInterceptor } from './token.interceptor';
 import { WeatherComponent } from './weather/weather.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: 'weather', component: WeatherComponent, canActivate: [AuthGuard] },
@@ -21,7 +22,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    WeatherComponent
+    WeatherComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -16,12 +16,17 @@ export class LoginService {
   }
 
   setToken(token: string) {
-    debugger;
-    localStorage.setItem('token', token);
+
+    localStorage.setItem('token', JSON.stringify(token));
   }
 
+  // getToken() {
+  //   return localStorage.getItem('token');
+  // }
+
   getToken() {
-    return localStorage.getItem('token');
+    const token = localStorage.getItem('token');
+    return token ? JSON.parse(token) : null;
   }
 
   isLoggedIn() {
